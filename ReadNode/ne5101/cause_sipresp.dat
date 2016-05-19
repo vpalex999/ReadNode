@@ -1,0 +1,4 @@
+'5101','0','RFC3398: prefer SIPResp, no exceptions','1','1','0'
+'5101','1','RFC3398: not prefer SIPResp, no exceptions','1','0','0'
+'5101','2','Q.1912.5: prefer SIPResp, no exceptions','2','1','0'
+'5101','3','Q.1912.5: not prefer SIPResp, no exceptions','2','0','0'

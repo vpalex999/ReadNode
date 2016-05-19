@@ -1,0 +1,120 @@
+'5101','0','No announcement',NULL,NULL
+'5101','10','Dialing','0',NULL
+'5101','11','Special Dialing','0',NULL
+'5101','12','Ringing','0',NULL
+'5101','13','Busy',NULL,NULL
+'5101','14','Congestion','0',NULL
+'5101','15','Special Information','0',NULL
+'5101','16','Call Waiting','0',NULL
+'5101','19','Confirmation','0',NULL
+'5101','20','Do not Disturb','0',NULL
+'5101','22','Alarm Call','0',NULL
+'5101','24','Execution','0',NULL
+'5101','25','Rejection or Negative Result','0',NULL
+'5101','28','Short Information','0',NULL
+'5101','29','Paid Time Expiration','0',NULL
+'5101','30','Wrong Number','0',NULL
+'5101','31','Centrex Group Member Dial','0',NULL
+'5101','34','General Welcome Message','0',NULL
+'5101','35','Welcome Message + Dial Number','0',NULL
+'5101','36','Dial PIN','0',NULL
+'5101','37','Wrong PIN','0',NULL
+'5101','38','Wrong Input','0',NULL
+'5101','39','Dial Number','0',NULL
+'5101','40','Overflow Call Attempt','0',NULL
+'5101','41','Call Back Message 1','0',NULL
+'5101','43','Customer Care Message','0',NULL
+'5101','44','Wrong Account State','0',NULL
+'5101','45','Voucher Re-used','0',NULL
+'5101','46','Unknown Voucher','0',NULL
+'5101','47','Unsuccessful Recharge','0',NULL
+'5101','48','Overflow Balance','0',NULL
+'5101','49','Outgoing Call Barring','0',NULL
+'5101','50','Account Locked','0',NULL
+'5101','51','Account Active','0',NULL
+'5101','52','New Balance','0',NULL
+'5101','53','Balance','0',NULL
+'5101','54','Recharge Amount','0',NULL
+'5101','55','Maximum Call Duration 1','0',NULL
+'5101','56','Maximum Call Duration 2','0',NULL
+'5101','57','Free of Charge Call','0',NULL
+'5101','58','Too Low Balance','0',NULL
+'5101','59','Expiry Date','0',NULL
+'5101','60','Low Balance Warning','0',NULL
+'5101','61','Dial Language Code','0',NULL
+'5101','62','CCBS/CCNR Rejection','0',NULL
+'5101','63','General PPS Menu for SCI','0',NULL
+'5101','64','Repeating Subscriber Input','0',NULL
+'5101','65','Transferring of Account was Successful','0',NULL
+'5101','66','Enter an Account Code','0',NULL
+'5101','67','Entering Wrong Account Code','0',NULL
+'5101','68','Confirmation of Subscriber Input','0',NULL
+'5101','69','Dial CIN','0',NULL
+'5101','72','Suppl. Service Confirmation','0',NULL
+'5101','73','Suppl. Service not Authorized','0',NULL
+'5101','74','Suppl. Service Irregular Request','0',NULL
+'5101','75','SCI Request Rejected','0',NULL
+'5101','76','Suppl. Service Active','0',NULL
+'5101','77','Suppl. Service Activation','0',NULL
+'5101','78','Suppl. Service Inactive','0',NULL
+'5101','79','Suppl. Service Deactivation','0',NULL
+'5101','80','Password Changed','0',NULL
+'5101','81','Wrong SCI','0',NULL
+'5101','83','MCID Confirmation','0',NULL
+'5101','84','Suppl. Service Request Rejected','0',NULL
+'5101','85','Release','0',NULL
+'5101','86','Message Waiting','0',NULL
+'5101','89','Account Misused','0',NULL
+'5101','90','Account Suspended','0',NULL
+'5101','91','Account Disabled','0',NULL
+'5101','92','Negative Balance','0',NULL
+'5101','93','Welcome, CB for Hook On, First Entrance','0',NULL
+'5101','94','Welcome, CB for Hook On','0',NULL
+'5101','97','General Welcome Message, CB Code','0',NULL
+'5101','98','No AR number','0',NULL
+'5101','99','Successful Televoting','0',NULL
+'5101','101','Call Forward. to Dest. DN','0',NULL
+'5101','102','Televoting Tariff (High)','0',NULL
+'5101','103','Put through the call','0',NULL
+'5101','104','Automatic Recall number','0',NULL
+'5101','105','Date of the call','0',NULL
+'5101','106','Stored number','0',NULL
+'5101','107','Protected number','0',NULL
+'5101','108','MMC held','0',NULL
+'5101','109','One member is in MMC','0',NULL
+'5101','110','Waiting for Free User','0',NULL
+'5101','111','Overflow Allowed Traffic','0',NULL
+'5101','112','Announcement at Connect','0',NULL
+'5101','115','This Call is Recording','0',NULL
+'5101','116','Recording is Impossible','0',NULL
+'5101','119','Waiting In-band Ind. for Priority Call','0',NULL
+'5101','120','Changed Number','0',NULL
+'5101','121','Not Equipped','0',NULL
+'5101','122','Subscriber Line OOS','0',NULL
+'5101','123','No Route','0',NULL
+'5101','124','Subscriber No Reply',NULL,NULL
+'5101','125','No Resources','0',NULL
+'5101','126','Call Gapping','0',NULL
+'5101','127','Call Barred','0',NULL
+'5101','128','Suspension','0',NULL
+'5101','129','CAC Misused','0',NULL
+'5101','130','List Screening','0',NULL
+'5101','131','Carrier Not Access','0',NULL
+'5101','132','Originating Suspension','0',NULL
+'5101','133','ACR Rejection','0',NULL
+'5101','134','FCR Rejection','0',NULL
+'5101','135','Wrong Number (RF Subscr. Cat. Group 1)','0',NULL
+'5101','136','Wrong Number (RF Subscr. Cat. Group 2)','0',NULL
+'5101','137','Wrong Number (RF Subscr. Cat. Group 3)','0',NULL
+'5101','138','Wrong Number (RF Subscr. Cat. Group 4)','0',NULL
+'5101','147','Invalid Number','0',NULL
+'5101','149','Hook off','0',NULL
+'5101','155','Call Pick Up Notification','0',NULL
+'5101','160','Incomplete Number','0',NULL
+'5101','161','No Channel Available','0',NULL
+'5101','162','Code Blocking','0',NULL
+'5101','163','Call Rate Reduction','0',NULL
+'5101','164','Call Gap Destination Depend','0',NULL
+'5101','165','Incoming Call Barring','0',NULL
+'5101','166','Selective Call Acceptance (Rejection)','0',NULL
+'5101','170','SSF Service Not Available','0',NULL
