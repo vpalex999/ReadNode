@@ -1,0 +1,8 @@
+'30000','1','MG/cCS - Default DSP IP Profile'
+'30000','2','NCS DSP IP Profile'
+'30000','3','LA - Default DSP IP Profile'
+'30000','4','MG/cCS - PT 30/40ms'
+'30000','5','MG/cCS - Fixed Jitter Buffer'
+'30000','6','cCS - Bad Network, PT 10/20ms'
+'30000','7','cCS - Bad Network, PT 30/40ms'
+'30000','11','Fitre - Fixed Jitter Buffer'

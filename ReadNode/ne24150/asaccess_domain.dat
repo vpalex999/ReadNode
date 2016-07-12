@@ -1,0 +1,8 @@
+'24150','0','Basic (recommended), Clip=AON'
+'24150','1','Specific, No_HookFlash, Bellcore'
+'24150','2','Specific, test, Susp., timers'
+'24150','3','Specific, test, Disc., timers'
+'24150','4','Specific, test_2, Susp., timers'
+'24150','5','Specific, LPAR-PSTN_active'
+'24150','6','Taksofon'
+'24150','7','AON'

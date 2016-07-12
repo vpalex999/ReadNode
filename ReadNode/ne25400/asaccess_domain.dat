@@ -1,0 +1,7 @@
+'25400','0','Basic (recommended), Clip=AON'
+'25400','1','Specific, No_HookFlash, Bellcore'
+'25400','2','Specific, test, Susp., timers'
+'25400','3','Specific, test, Disc., timers'
+'25400','4','Specific, test_2, Susp., timers'
+'25400','5','Specific, LPAR-PSTN_active'
+'25400','6','Clip=FSK'

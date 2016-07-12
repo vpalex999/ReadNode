@@ -1,0 +1,34 @@
+-------------------------------------------------
+NODEID:				19362
+NODENAME:			Default exchange SI2000/V6
+HOSTNAME:			kyzylssw
+HOSTNAME1:			kyzylssw1
+HOSTNAME2:			kyzylssw2
+GEOSYS_UNIT_ID:		
+DB_RELEASE:			YCGD0G07
+DATA_RELEASE:		YCGG0A38
+-------------------------------------------------
+BOARDNR:			1				| 2
+PARENT_BOARDNR:		NULL			| NULL
+BOARD_POS:			1				| 2
+BOARD_TYPE:			64				| 64
+BOARD_EQUIP:		1				| 1
+BOARD_OOSI:			0				| 0
+REQ_BOARD_ID:		UTA6051CA		| UTA6051CA
+ACT_BOARD_ID:		NULL		| NULL
+BOARD_SERIALNR:		NULL	| NULL
+BOARD_DSC:			CMF_L			| CMF_R
+BOARD_PROFILE_TYPE: 0				| 0
+BOARD_PROFILE_ID:	0				| 0
+S_NODE:								| 
+GEOSYS_UNIT_ID:						| 
+-------------------------------------------------
+CS6113AX:
+Version release: 490
+MN Release: MYLL0A40
+SN Release: MYKM0A47
+DB Release: YCGD0G07
+DATA Release: YCGG0A38
+Preinstallation: 
+Info: SP = MYMH0D05; MN>=MN6031AX660
+-------------------------------------------------

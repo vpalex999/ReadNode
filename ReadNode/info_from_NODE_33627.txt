@@ -1,0 +1,25 @@
+-------------------------------------------------
+NODEID:				33627
+NODENAME:			SMG1
+HOSTNAME:			smg0007
+HOSTNAME1:			NULL
+HOSTNAME2:			NULL
+GEOSYS_UNIT_ID:		
+DB_RELEASE:			YHPB0A17
+DATA_RELEASE:		YHPK0A22
+-------------------------------------------------
+BOARDNR:			1				| 2
+PARENT_BOARDNR:		NULL			| 1
+BOARD_POS:			7				| 4
+BOARD_TYPE:			83				| 61
+BOARD_EQUIP:		1				| 1
+BOARD_OOSI:			0				| 0
+REQ_BOARD_ID:		UTA6097AA010		| ETN6047BD
+ACT_BOARD_ID:		UTA6097AA010		| ETN6047BD021
+BOARD_SERIALNR:		Z11291963H	| Z11341683G
+BOARD_DSC:			CMI			| CDK
+BOARD_PROFILE_TYPE: 0				| 0
+BOARD_PROFILE_ID:	0				| 0
+S_NODE:								| 
+GEOSYS_UNIT_ID:						| 
+-------------------------------------------------

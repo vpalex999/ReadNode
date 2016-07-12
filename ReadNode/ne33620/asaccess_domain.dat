@@ -1,0 +1,6 @@
+'33620','0','Basic (recommended), Clip=AON'
+'33620','1','Specific, No_HookFlash, Bellcore'
+'33620','2','Specific, test, Susp., timers'
+'33620','3','Specific, test, Disc., timers'
+'33620','4','Specific, test_2, Susp., timers'
+'33620','5','Specific, LPAR-PSTN_active'

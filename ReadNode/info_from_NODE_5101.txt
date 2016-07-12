@@ -1,0 +1,9 @@
+-------------------------------------------------
+NODEID:				5101
+NODENAME:			SSW10
+HOSTNAME:			ssw10
+HOSTNAME1:			ssw10-1
+HOSTNAME2:			ssw10-2
+GEOSYS_UNIT_ID:		1
+DB_RELEASE:			YHSD0U18
+DATA_RELEASE:		YJHV0B22

@@ -1,0 +1,6 @@
+'24150','0','RFC3398: prefer SIPResp, no exceptions','1','1','0'
+'24150','1','RFC3398: not prefer SIPResp, no exceptions','1','0','0'
+'24150','2','Q.1912.5: prefer SIPResp, no exceptions','2','1','0'
+'24150','3','Q.1912.5: not prefer SIPResp, no exceptions','2','0','0'
+'24150','4','Test','1','1','1'
+'24150','5','test5','1','1','0'

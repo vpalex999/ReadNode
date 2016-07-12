@@ -1,0 +1,2 @@
+CREATE CATALOG SOLID_DB_CATALOG; commit work;
+

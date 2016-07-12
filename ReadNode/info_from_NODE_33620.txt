@@ -1,0 +1,52 @@
+-------------------------------------------------
+NODEID:				33620
+NODENAME:			SSW
+HOSTNAME:			ssw
+HOSTNAME1:			ssw0005
+HOSTNAME2:			ssw0006
+GEOSYS_UNIT_ID:		1
+DB_RELEASE:			YHSD0R07
+DATA_RELEASE:		YHSG0A40
+-------------------------------------------------
+BOARDNR:			1				| 2
+PARENT_BOARDNR:		NULL			| NULL
+BOARD_POS:			5				| 6
+BOARD_TYPE:			72				| 72
+BOARD_EQUIP:		1				| 1
+BOARD_OOSI:			0				| 0
+REQ_BOARD_ID:		UTA6085AA		| UTA6085AA
+ACT_BOARD_ID:		UTA6085AA020		| UTA6085AA020
+BOARD_SERIALNR:		Z11370971G	| Z11370972G
+BOARD_DSC:			CVJ_L			| CVJ_R
+BOARD_PROFILE_TYPE: 0				| 0
+BOARD_PROFILE_ID:	0				| 0
+S_NODE:				1				| 2
+GEOSYS_UNIT_ID:		1				| 1
+-------------------------------------------------
+CS6115AX:
+Version release: 146 [4.1.1.0]
+MN Release: MNAH0H02
+SN Release: MWJR0F01
+DB Release: YHSD0R07
+DATA Release: YHSG0A40
+Preinstallation: 
+Info: SP = MYMH0J35; MN>=MN6031AX974, MN6211AX134  + RPM 
+-------------------------------------------------
+CS6115AX:
+Version release: 158 [4.1.2.0]
+MN Release: MNAH0H09
+SN Release: MWJR0F02
+DB Release: YHSD0R07
+DATA Release: YHSG0A40
+Preinstallation: 
+Info: SP = MYMH0J35; MN>=MN6031AX982, MN6211AX148  + RPM 
+-------------------------------------------------
+CS6115AX:
+Version release: 169 [4.1.3.0]
+MN Release: MNAH0H18
+SN Release: MWJR0F05
+DB Release: YHSD0R07
+DATA Release: YHSG0A40
+Preinstallation: 
+Info: SP = MYMH0J35; MN>=MN6031AX987, MN6211AX148  
+-------------------------------------------------
