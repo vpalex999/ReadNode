@@ -30,6 +30,8 @@ class ReadNode(object):
 
      boardCS=[]
      boardMG=[]
+     boardCCS=[]
+
 
               
      # массив с найденными релизами в xml
