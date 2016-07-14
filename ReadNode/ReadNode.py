@@ -26,12 +26,13 @@ class ReadNode(object):
      # tableboard=[{"NODEID":"", "BOARDNR":"", "PARENT_BOARD":"", "BOARD_POS":"", "BOARD_TYPE":"", "BOARD_EQUIP":"",
      #              "BOARD_OOSI":"", "REQ_BOARD_ID":"", "ACT_BOARD_ID":"", "BOARD_SERIALNR":"", "BOARD_DSC":"",
      #              "BOARD_PROFILE_TYPE":"", "BOARD_PROFILE_ID":""}]
+     #
+     # Здесь смотрим информацию о структуре полей из таблицы board.dat для CCS
 
 
      boardCS=[]
-     boardMG=[]
      boardCCS=[]
-     boardLI=[]
+     
               
      # массив с найденными релизами в xml
      releases = [] 
@@ -390,7 +391,7 @@ def createParser():
     parent_group = parser.add_argument_group(title="Параметры")
     parent_group.add_argument('--help','-h',action='help',help='Справка')
     parser.add_argument('directory', help="Обязательный параметр: Имя папки с экспортом. Например: ne5101.") # первый обязательный аргумент указывает директорию экспорта
-    parser.add_argument('-t', choices=['CS','cs','CCS','ccs','MG','mg'], help="Обязательный параметр: Тип узла - CS,CCS,MG. Например: -t cs. ") # второй аргумент определяет тип узла: CS, CCS, MG
+    parser.add_argument('-t', choices=['CS','cs','CCS','ccs','MG','mg'], help="Необязательный параметр: Тип узла - CS,CCS,MG. Например: -t cs. ") # второй аргумент определяет тип узла: CS, CCS, MG
     parser.add_argument('--version','-v', action = 'version',help = 'Вывести номер версии',version = '%(prog)s {}'.format(version)) # показывают версию
     return parser
 # END Parser
