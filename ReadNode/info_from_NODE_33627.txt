@@ -23,3 +23,48 @@ BOARD_PROFILE_ID:	0				| 0
 S_NODE:								| 
 GEOSYS_UNIT_ID:						| 
 -------------------------------------------------
+MG6114AX:
+Version release: 085 [4.1.0.0]
+MN Release: MNBB0B07
+SN Release: MVNA0A42
+DB Release: YHPB0A17
+DATA Release: YHPK0A22
+Preinstallation: 
+Info: SP = MYMJ0A81; MN>=MN6031AX970 Reset PCU
+-------------------------------------------------
+MG6114AX:
+Version release: 087 [4.1.1.0]
+MN Release: MNBB0B09
+SN Release: MVNA0A43
+DB Release: YHPB0A17
+DATA Release: YHPK0A22
+Preinstallation: 
+Info: SP = MYMJ0A82; MN>=MN6031AX971+RPM
+-------------------------------------------------
+MG6114AX:
+Version release: 089 [4.1.2.0]
+MN Release: MNBB0B09
+SN Release: MVNA0C01
+DB Release: YHPB0A17
+DATA Release: YHPK0A22
+Preinstallation: 
+Info: SP = MYMJ0A83; MN>=MN6031AX971 
+-------------------------------------------------
+MG6114AX:
+Version release: 093 [4.1.3.0]
+MN Release: MNBB0C04
+SN Release: MVNA0C02
+DB Release: YHPB0A17
+DATA Release: YHPK0A22
+Preinstallation: 
+Info: SP = MYMJ0A84; MN>=MN6031AX971
+-------------------------------------------------
+MG6114AX:
+Version release: 096 [4.1.3.1]
+MN Release: MNBB0C05
+SN Release: MVNA0C03
+DB Release: YHPB0A17
+DATA Release: YHPK0A22
+Preinstallation: 
+Info: SP = MYMJ0A86; MN>=MN6031AX971
+-------------------------------------------------
