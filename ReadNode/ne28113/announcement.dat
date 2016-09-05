@@ -1,0 +1,119 @@
+'28113','0','No announcement',NULL,NULL
+'28113','10','Dialing',NULL,NULL
+'28113','11','Special Dialing','0',NULL
+'28113','12','Ringing','0',NULL
+'28113','13','Busy','0',NULL
+'28113','14','Congestion','0',NULL
+'28113','15','Special Information','0',NULL
+'28113','16','Call Waiting',NULL,NULL
+'28113','19','Confirmation','0',NULL
+'28113','20','Do not Disturb','0',NULL
+'28113','22','Alarm Call','0',NULL
+'28113','24','Execution','0',NULL
+'28113','25','Rejection or Negative Result','0',NULL
+'28113','28','Short Information','0',NULL
+'28113','29','Paid Time Expiration','0',NULL
+'28113','30','Wrong Number','0',NULL
+'28113','31','Centrex Group Member Dial','0',NULL
+'28113','34','General Welcome Message','0',NULL
+'28113','35','Welcome Message + Dial Number','0',NULL
+'28113','36','Dial PIN','0',NULL
+'28113','37','Wrong PIN','0',NULL
+'28113','38','Wrong Input','0',NULL
+'28113','39','Dial Number','0',NULL
+'28113','40','Overflow Call Attempt','0',NULL
+'28113','41','Call Back Message 1','0',NULL
+'28113','43','Customer Care Message','0',NULL
+'28113','44','Wrong Account State','0',NULL
+'28113','45','Voucher Re-used','0',NULL
+'28113','46','Unknown Voucher','0',NULL
+'28113','47','Unsuccessful Recharge','0',NULL
+'28113','48','Overflow Balance','0',NULL
+'28113','49','Outgoing Call Barring','0',NULL
+'28113','50','Account Locked','0',NULL
+'28113','51','Account Active','0',NULL
+'28113','52','New Balance','0',NULL
+'28113','53','Balance','0',NULL
+'28113','54','Recharge Amount','0',NULL
+'28113','55','Maximum Call Duration 1','0',NULL
+'28113','56','Maximum Call Duration 2','0',NULL
+'28113','57','Free of Charge Call','0',NULL
+'28113','58','Too Low Balance','0',NULL
+'28113','59','Expiry Date','0',NULL
+'28113','60','Low Balance Warning','0',NULL
+'28113','61','Dial Language Code','0',NULL
+'28113','62','CCBS/CCNR Rejection','0',NULL
+'28113','63','General PPS Menu for SCI','0',NULL
+'28113','64','Repeating Subscriber Input','0',NULL
+'28113','65','Transferring of Account was Successful','0',NULL
+'28113','66','Enter an Account Code','0',NULL
+'28113','67','Entering Wrong Account Code','0',NULL
+'28113','68','Confirmation of Subscriber Input','0',NULL
+'28113','69','Dial CIN','0',NULL
+'28113','72','Suppl. Service Confirmation','0',NULL
+'28113','73','Suppl. Service not Authorized','0',NULL
+'28113','74','Suppl. Service Irregular Request','0',NULL
+'28113','75','SCI Request Rejected','0',NULL
+'28113','76','Suppl. Service Active','0',NULL
+'28113','77','Suppl. Service Activation','0',NULL
+'28113','78','Suppl. Service Inactive','0',NULL
+'28113','79','Suppl. Service Deactivation','0',NULL
+'28113','80','Password Changed','0',NULL
+'28113','81','Wrong SCI','0',NULL
+'28113','83','MCID Confirmation','0',NULL
+'28113','84','Suppl. Service Request Rejected','0',NULL
+'28113','85','Release','0',NULL
+'28113','86','Message Waiting','0',NULL
+'28113','89','Account Misused','0',NULL
+'28113','90','Account Suspended','0',NULL
+'28113','91','Account Disabled','0',NULL
+'28113','92','Negative Balance','0',NULL
+'28113','93','Welcome, CB for Hook On, First Entrance','0',NULL
+'28113','94','Welcome, CB for Hook On','0',NULL
+'28113','97','General Welcome Message, CB Code','0',NULL
+'28113','98','No AR number','0',NULL
+'28113','99','Successful Televoting','0',NULL
+'28113','101','Televoting Call Forward. to Dest. DN','0',NULL
+'28113','102','Televoting Tariff (High)','0',NULL
+'28113','103','Put through the call','0',NULL
+'28113','104','Automatic Recall number','0',NULL
+'28113','105','Date of the call','0',NULL
+'28113','106','Stored number','0',NULL
+'28113','107','Protected number','0',NULL
+'28113','108','MMC held','0',NULL
+'28113','109','One member is in MMC','0',NULL
+'28113','110','Waiting for Free User','0',NULL
+'28113','111','Overflow Allowed Traffic','0',NULL
+'28113','112','Announcement at Connect',NULL,NULL
+'28113','115','This Call is Recording','0',NULL
+'28113','116','Recording is Impossible','0',NULL
+'28113','119','Waiting In-band Ind. for Priority Call','0',NULL
+'28113','120','Changed Number','0',NULL
+'28113','121','Not Equipped','0',NULL
+'28113','122','Subscriber Line OOS','0',NULL
+'28113','123','No Route','0',NULL
+'28113','124','Subscriber No Reply','0',NULL
+'28113','125','No Resources','0',NULL
+'28113','126','Call Gapping','0',NULL
+'28113','127','Call Barred','0',NULL
+'28113','128','Suspension','0',NULL
+'28113','129','CAC Misused','0',NULL
+'28113','130','List Screening','0',NULL
+'28113','131','Carrier Not Access','0',NULL
+'28113','132','Originating Suspension','0',NULL
+'28113','133','ACR Rejection','0',NULL
+'28113','134','FCR Rejection','0',NULL
+'28113','135','Wrong Number (RF Subscr. Cat. Group 1)','0',NULL
+'28113','136','Wrong Number (RF Subscr. Cat. Group 2)','0',NULL
+'28113','137','Wrong Number (RF Subscr. Cat. Group 3)','0',NULL
+'28113','138','Wrong Number (RF Subscr. Cat. Group 4)','0',NULL
+'28113','147','Invalid Number','0',NULL
+'28113','149','Hook off','0',NULL
+'28113','155','Call Pick Up Notification','0',NULL
+'28113','160','Incomplete Number','0',NULL
+'28113','161','No Channel Available','0',NULL
+'28113','162','Code Blocking','0',NULL
+'28113','163','Call Rate Reduction','0',NULL
+'28113','164','Call Gap Destination Depend','0',NULL
+'28113','165','Incoming Call Barring','0',NULL
+'28113','166','Selective Call Acceptance (Rejection)','0',NULL
