@@ -1,0 +1,119 @@
+'14609','0','No announcement',NULL,NULL
+'14609','10','Dialing','0',NULL
+'14609','11','Special Dialing','0',NULL
+'14609','12','Ringing','0',NULL
+'14609','13','Busy','0',NULL
+'14609','14','Congestion','0',NULL
+'14609','15','Special Information','0',NULL
+'14609','16','Call Waiting','0',NULL
+'14609','19','Confirmation','0',NULL
+'14609','20','Do not Disturb','0',NULL
+'14609','22','Alarm Call','0',NULL
+'14609','24','Execution','0',NULL
+'14609','25','Rejection or Negative Result','0',NULL
+'14609','28','Short Information','0',NULL
+'14609','29','Paid Time Expiration','0',NULL
+'14609','30','Wrong Number','0',NULL
+'14609','31','Centrex Group Member Dial','0',NULL
+'14609','34','General Welcome Message','0',NULL
+'14609','35','Welcome Message + Dial Number','0',NULL
+'14609','36','Dial PIN','0',NULL
+'14609','37','Wrong PIN','0',NULL
+'14609','38','Wrong Input','0',NULL
+'14609','39','Dial Number','0',NULL
+'14609','40','Overflow Call Attempt','0',NULL
+'14609','41','Call Back Message 1','0',NULL
+'14609','43','Customer Care Message','0',NULL
+'14609','44','Wrong Account State','0',NULL
+'14609','45','Voucher Re-used','0',NULL
+'14609','46','Unknown Voucher','0',NULL
+'14609','47','Unsuccessful Recharge','0',NULL
+'14609','48','Overflow Balance','0',NULL
+'14609','49','Outgoing Call Barring','0',NULL
+'14609','50','Account Locked','0',NULL
+'14609','51','Account Active','0',NULL
+'14609','52','New Balance','0',NULL
+'14609','53','Balance','0',NULL
+'14609','54','Recharge Amount','0',NULL
+'14609','55','Maximum Call Duration 1','0',NULL
+'14609','56','Maximum Call Duration 2','0',NULL
+'14609','57','Free of Charge Call','0',NULL
+'14609','58','Too Low Balance','0',NULL
+'14609','59','Expiry Date','0',NULL
+'14609','60','Low Balance Warning','0',NULL
+'14609','61','Dial Language Code','0',NULL
+'14609','62','CCBS/CCNR Rejection','0',NULL
+'14609','63','General PPS Menu for SCI','0',NULL
+'14609','64','Repeating Subscriber Input','0',NULL
+'14609','65','Transferring of Account was Successful','0',NULL
+'14609','66','Enter an Account Code','0',NULL
+'14609','67','Entering Wrong Account Code','0',NULL
+'14609','68','Confirmation of Subscriber Input','0',NULL
+'14609','69','Dial CIN','0',NULL
+'14609','72','Suppl. Service Confirmation','0',NULL
+'14609','73','Suppl. Service not Authorized','0',NULL
+'14609','74','Suppl. Service Irregular Request','0',NULL
+'14609','75','SCI Request Rejected','0',NULL
+'14609','76','Suppl. Service Active','0',NULL
+'14609','77','Suppl. Service Activation','0',NULL
+'14609','78','Suppl. Service Inactive','0',NULL
+'14609','79','Suppl. Service Deactivation','0',NULL
+'14609','80','Password Changed','0',NULL
+'14609','81','Wrong SCI','0',NULL
+'14609','83','MCID Confirmation','0',NULL
+'14609','84','Suppl. Service Request Rejected','0',NULL
+'14609','85','Release','0',NULL
+'14609','86','Message Waiting','0',NULL
+'14609','89','Account Misused','0',NULL
+'14609','90','Account Suspended','0',NULL
+'14609','91','Account Disabled','0',NULL
+'14609','92','Negative Balance','0',NULL
+'14609','93','Welcome, CB for Hook On, First Entrance','0',NULL
+'14609','94','Welcome, CB for Hook On','0',NULL
+'14609','97','General Welcome Message, CB Code','0',NULL
+'14609','98','No AR number','0',NULL
+'14609','99','Successful Televoting','0',NULL
+'14609','101','Televoting Call Forward. to Dest. DN','0',NULL
+'14609','102','Televoting Tariff (High)','0',NULL
+'14609','103','Put through the call','0',NULL
+'14609','104','Automatic Recall number','0',NULL
+'14609','105','Date of the call','0',NULL
+'14609','106','Stored number','0',NULL
+'14609','107','Protected number','0',NULL
+'14609','108','MMC held','0',NULL
+'14609','109','One member is in MMC','0',NULL
+'14609','110','Waiting for Free User','0',NULL
+'14609','111','Overflow Allowed Traffic','0',NULL
+'14609','112','Announcement at Connect','0',NULL
+'14609','115','This Call is Recording','0',NULL
+'14609','116','Recording is Impossible','0',NULL
+'14609','119','Waiting In-band Ind. for Priority Call','0',NULL
+'14609','120','Changed Number','0',NULL
+'14609','121','Not Equipped','0',NULL
+'14609','122','Subscriber Line OOS','0',NULL
+'14609','123','No Route','0',NULL
+'14609','124','Subscriber No Reply','0',NULL
+'14609','125','No Resources','0',NULL
+'14609','126','Call Gapping','0',NULL
+'14609','127','Call Barred','0',NULL
+'14609','128','Suspension','0',NULL
+'14609','129','CAC Misused','0',NULL
+'14609','130','List Screening','0',NULL
+'14609','131','Carrier Not Access','0',NULL
+'14609','132','Originating Suspension','0',NULL
+'14609','133','ACR Rejection','0',NULL
+'14609','134','FCR Rejection','0',NULL
+'14609','135','Wrong Number (RF Subscr. Cat. Group 1)','0',NULL
+'14609','136','Wrong Number (RF Subscr. Cat. Group 2)','0',NULL
+'14609','137','Wrong Number (RF Subscr. Cat. Group 3)','0',NULL
+'14609','138','Wrong Number (RF Subscr. Cat. Group 4)','0',NULL
+'14609','147','Invalid Number','0',NULL
+'14609','149','Hook off','0',NULL
+'14609','155','Call Pick Up Notification','0',NULL
+'14609','160','Incomplete Number','0',NULL
+'14609','161','No Channel Available','0',NULL
+'14609','162','Code Blocking','0',NULL
+'14609','163','Call Rate Reduction','0',NULL
+'14609','164','Call Gap Destination Depend','0',NULL
+'14609','165','Incoming Call Barring','0',NULL
+'14609','166','Selective Call Acceptance (Rejection)','0',NULL

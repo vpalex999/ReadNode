@@ -1,0 +1,15 @@
+'14609','1','libcharge.so','adapter','AMA','group = amausers','owner = neadmin','dperm = 770','fperm = 770','shortxml = false',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','2','libcharge.so','Performance adapter','STAT','group = performanceusers','owner = neadmin','dperm = 770','fperm = 770',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','3','libcharge.so','MOB adapter','MOB','group = mobusers','owner = neadmin','dperm = 770','fperm = 770',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','4','libcharge.so','Centrex adapter','CENTREX','group = amausers','owner = neadmin','dperm = 770','fperm = 770',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','5','libcharge.so','ALL adapter','ALL','group = amausers','owner = neadmin','dperm = 770','fperm = 770',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','6','libcdrmediation.so','SI2000 mediation',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','7','libewsdmediation.so','EWSD mediation',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','8','libxmlmediation.so','XML mediation',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','9','libunlmediation.so','UNL mediation','config = unlcfg_default',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','10','libcharge.so','adapter','IACAMA','group = amausers','owner = neadmin','dperm = 770','fperm = 770','shortxml = false',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','11','libcharge.so','OnlineCDRBkp adapter','OnlineCDRBkp','group = amausers','owner = neadmin','dperm = 770','fperm = 770',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','12','libcharge.so','OnlineAcctBkp adapter','OnlineAcctBkp','group = amausers','owner = neadmin','dperm = 770','fperm = 770',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','13','libcharge.so','adapter','AMA','group = users','owner = neadmin','dperm = 770','fperm = 770','shortxml = false',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','14','libcharge.so','adapter','AMA','group = users','owner = neadmin','dperm = 770','fperm = 770','shortxml = false',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','15','libcharge.so','adapter','AMA','group = users','owner = neadmin','dperm = 770','fperm = 770','shortxml = false',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL

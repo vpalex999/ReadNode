@@ -1,8 +1,0 @@
-'28113','0','Basic (recommended), Clip=AON'
-'28113','1','Specific, No_HookFlash, Bellcore'
-'28113','2','Specific, test, Susp., timers'
-'28113','3','Specific, test, Disc., timers'
-'28113','4','Specific, test_2, Susp., timers'
-'28113','5','Specific, LPAR-PSTN_active'
-'28113','6','Clip etsi'
-'28113','7','AOH'

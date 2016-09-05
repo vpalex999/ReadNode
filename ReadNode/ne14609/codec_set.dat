@@ -1,0 +1,18 @@
+'14609','1','Universal 20ms: G711A & G711u','0','1','1','1','0','7','9',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','2','Universal 30ms: G711u & G711A','0','1','1','1','0','2','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','3','Audio 30ms: G729A & G711','0','1','0','0','0','3','1','2',NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','4','Audio 30ms: G729AB & G711','0','1','0','0','0','4','1','2',NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','5','Audio 30ms:G723 & G711 & G729A','0','1','0','0','0','5','1','2','3',NULL,NULL,NULL,NULL,NULL,NULL
+'14609','6','Universal 30ms: G711A & G711u','0','1','1','1','0','1','2',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','7','Audio 40ms: G729AB','0','1','0','0','0','15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','8','Fax: T38','0','0','1','0','0','16',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','9','Audio 20ms: G711&G729&G723(30)','0','1','0','0','0','7','9','11','14','5',NULL,NULL,NULL,NULL,NULL
+'14609','10','Audio 30ms: G711 & G729','0','1','0','0','0','1','2','3','4',NULL,NULL,NULL,NULL,NULL,NULL
+'14609','11','Video: H261 & H263 & H264','0','0','0','0','1','44','43','42','41','40',NULL,NULL,NULL,NULL,NULL
+'14609','12','Fax: T38 & G711 20ms','0','0','1','0','0','16','7','9',NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','13','Data:G711,ClearMode,T140','0','0','1','0','0','7','9','47','52','53',NULL,NULL,NULL,NULL,NULL
+'14609','14','Audio: WideBand codecs','0','0','1','0','0','7','9','32','31','30','36','35','34','28','37'
+'14609','15','Video: all codecs','0','0','0','0','1','44','43','42','41','40','49','50','51',NULL,NULL
+'14609','16','RT univ 20ms: G711A & G711u','1','1','0','0','0','7','9','11',NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','17','20ms: G711u','1','1','1','1','0','9',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+'14609','18','Universal 10ms: G711A & G711u','1','1','1','1','0','6','8',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL

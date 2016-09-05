@@ -1,9 +1,0 @@
--------------------------------------------------
-NODEID:				30000
-NODENAME:			ccsrus
-HOSTNAME:			ccsrus
-HOSTNAME1:			ccsrus1
-HOSTNAME2:			ccsrus2
-GEOSYS_UNIT_ID:		1
-DB_RELEASE:			YHRT1D05
-DATA_RELEASE:		YHYS0D09
