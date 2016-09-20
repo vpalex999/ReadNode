@@ -245,7 +245,7 @@ class ReadNode(object):
                  file_node.write(item+"\n")       
          else: return False
            
-     # печать обработанных данных xml
+     # печать обработанных данных xml 
      def print_release_xml(self,releases,description_releases,version,file_node):
                  xml = []
                  # печатаем результат        
