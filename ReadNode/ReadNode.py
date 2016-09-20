@@ -2,7 +2,7 @@
 import sys, os
 import argparse # работаем с аргументами командной строки
 import xlrd     # работаем с XLS документом на чтение
-version = "0.0.1"
+version = "0.0.2"
 
 class ReadNode(object):
     #здесь храним информацию из таблицы node.dat
@@ -29,6 +29,9 @@ class ReadNode(object):
      #
      # Здесь смотрим информацию о структуре полей из таблицы board.dat для CCS
 
+     # Здесь в словаре смотрим расшифровку кода к типу платы из значения BOARD_TYPE
+     boardtypeid = {"54":"CVH или CVI","85":"CVK","97":"CVM","72":"CVJ",}
+
 
      boardCS=[]
      boardCCS=[]
@@ -48,6 +51,13 @@ class ReadNode(object):
          self.typenode = typenode
          #self.typenode = typenode.lower()
          
+    # расшифровка кода типа платы из значения BOARD_TYPE 
+     def boardtipeidtotype(self, boardtype): 
+         texttype="неизвестный тип :("
+         for id in self.boardtypeid: # перебираем значения BOARD_TYPE из словаря
+             if boardtype == id:     # сравниваем с актуальным значением  BOARD_TYPE из таблицы board 
+                 texttype = self.boardtypeid[id] # если сходится, то берем из словаря текстовое значение
+         return texttype    
 
 # функция удаляет знак переноса каретки \n в конце строки и форматирует
      def formatstring(self,temp_string):
@@ -211,12 +221,13 @@ class ReadNode(object):
          board = []
          if self.typenode == 'cs' or self.typenode == "mg":  
              boardCS = self.boardCS          
+             #boardtext = self.boardtipeidtotype(boardCS[0]["BOARD_TYPE"])
              # форматирование строк с данными и добавление в массив board
              board.append("-------------------------------------------------")
              board.append('BOARDNR:\t\t\t'+boardCS[0]['BOARDNR']+'\t\t\t\t| '+boardCS[1]['BOARDNR'])
              board.append('PARENT_BOARDNR:\t\t'+boardCS[0]["PARENT_BOARDNR"]+'\t\t\t| '+boardCS[1]["PARENT_BOARDNR"])
              board.append('BOARD_POS:\t\t\t'+boardCS[0]["BOARD_POS"]+'\t\t\t\t| '+boardCS[1]["BOARD_POS"])
-             board.append('BOARD_TYPE:\t\t\t'+boardCS[0]["BOARD_TYPE"]+'\t\t\t\t| '+boardCS[1]["BOARD_TYPE"])
+             board.append('BOARD_TYPE:\t\t\t'+boardCS[0]["BOARD_TYPE"]+'\t\t\t\t| '+boardCS[1]["BOARD_TYPE"]+'\t board type = '+self.boardtipeidtotype(boardCS[0]["BOARD_TYPE"]))
              board.append('BOARD_EQUIP:\t\t'+boardCS[0]["BOARD_EQUIP"]+'\t\t\t\t| '+boardCS[1]["BOARD_EQUIP"])
              board.append('BOARD_OOSI:\t\t\t'+boardCS[0]["BOARD_OOSI"]+'\t\t\t\t| '+boardCS[1]["BOARD_OOSI"])
              board.append('REQ_BOARD_ID:\t\t'+boardCS[0]["REQ_BOARD_ID"]+'\t\t| '+boardCS[1]["REQ_BOARD_ID"])
@@ -402,14 +413,13 @@ def createParser():
 if __name__ == '__main__':
   parser = createParser() 
   if len(sys.argv[1:]) != 0: # Если есть аргументы в командной строке
-    namespace = parser.parse_args(sys.argv[1:]) # Сохраняем аргументы в виде массива
-    
+    namespace = parser.parse_args(sys.argv[1:]) # Сохраняем аргументы в виде массива  
     #выполнить проверку наличия директории 
     if(os.path.exists(namespace.directory)): # если директория с экспортом существует, то выполняем парсинг
         print("\nВыбрана директория с экспортом: {}!".format(namespace.directory))
         # если в командной строке указывается дополнительный(необязательный аргумент) -  тип экспорта напримет: -t cs
         if namespace.t:
-            typenode = namespace.t.lower() # перевом в строчный формат          
+            typenode = namespace.t.lower() # перевод в строчный формат          
             my_node = ReadNode(namespace.directory,typenode) # создаём экземпляр класса c типом узла указанным в аргументе -t:  cs, mg, ....
         else:
             my_node = ReadNode(namespace.directory) # если нет дополнительного аргумента с типом узла, то создаем объект только с указанием расположения директории экспорта
