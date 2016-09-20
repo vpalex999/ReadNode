@@ -1,7 +1,0 @@
-'25400','1','ama.cdr','/opt/si2000/neroot/charging/working','/opt/si2000/neroot/charging/transfer','$(NODE)$(DATE)$(TIME)$(INDEX,2).ama','0','1','1',NULL,NULL,'1','1'
-'25400','2','performance.cdr','/opt/si2000/neroot/files/performance/working','/opt/si2000/neroot/files/performance/cdr','$(NODE)$(DATE)$(HOUR)$(MIN)$(INDEX,2)','512','2','1',NULL,NULL,NULL,'2'
-'25400','3','mob.cdr','/opt/si2000/neroot/files/mob/working','/opt/si2000/neroot/files/mob/cdr','$(NODE)_$(DATE)$(TIME)_mob_$(INDEX,3).$(SUFFIX)','768','3','1',NULL,NULL,NULL,'3'
-'25400','4','centrex.cdr','/opt/si2000/neroot/charging/working','/opt/si2000/neroot/charging/centrex','$(NODE)cdr.$(INDEX,3)','256','4','1',NULL,NULL,NULL,'4'
-'25400','5','v5ama.cdr','/opt/si2000/neroot/charging/working','/opt/si2000/neroot/charging/v5transfer','$(NODE)cdr.$(INDEX,3)','512','5','1',NULL,NULL,NULL,'5'
-'25400','6','archive','/opt/si2000/neroot/charging/archive','/opt/si2000/neroot/charging/archive','archive','1536',NULL,NULL,NULL,NULL,NULL,'6'
-'25400','7','iacama.cdr','/opt/si2000/neroot/charging/working','/opt/si2000/neroot/charging/iacama','$(NODE)$(DATE)$(TIME)$(INDEX,2).si3000iacama','0','10','1',NULL,NULL,NULL,'7'

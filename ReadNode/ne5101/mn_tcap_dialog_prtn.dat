@@ -1,8 +1,0 @@
-'5101','5','MAP anyTimeInfoEnquiry V3'
-'5101','6','MAP locationInfoRetrieval V3'
-'5101','7','MAP imsiRetrieval V2'
-'5101','8','MAP anyTimeInfoHandling V3'
-'5101','11','CAP V1 gsmssf-to-gsmscf-AC'
-'5101','12','CAP V2 gsmssf-to-gsmscf-AC'
-'5101','13','CAP V3 gsmSSF-scfGenericAC'
-'5101','20','INAP-R CS1-SSP-to-SCP-AC'

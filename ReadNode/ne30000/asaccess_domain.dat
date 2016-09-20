@@ -1,7 +1,0 @@
-'30000','0','Basic (recommended), Clip=AON'
-'30000','1','Specific, No_HookFlash, Bellcore'
-'30000','2','Specific, test, Susp., timers'
-'30000','3','Specific, test, Disc., timers'
-'30000','4','Specific, test_2, Susp., timers'
-'30000','5','Specific, LPAR-PSTN_active'
-'30000','6','Specific, OTC VAD comfort noise'

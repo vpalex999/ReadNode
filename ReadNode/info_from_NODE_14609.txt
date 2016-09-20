@@ -1,0 +1,52 @@
+-------------------------------------------------
+NODEID:				14609
+NODENAME:			cssimferopol
+HOSTNAME:			cssimferopol
+HOSTNAME1:			cs1simferopol
+HOSTNAME2:			cs2simferopol
+GEOSYS_UNIT_ID:		1
+DB_RELEASE:			YHSD0S11
+DATA_RELEASE:		YHSG0A80
+-------------------------------------------------
+BOARDNR:			1				| 2
+PARENT_BOARDNR:		NULL			| NULL
+BOARD_POS:			3				| 4
+BOARD_TYPE:			97				| 97
+BOARD_EQUIP:		1				| 1
+BOARD_OOSI:			0				| 0
+REQ_BOARD_ID:		T5008CX_1-BX		| T5008CX_1-BX
+ACT_BOARD_ID:		T5008CX_1-BX		| T5008CX_1-BX
+BOARD_SERIALNR:		9014044760	| 9014044762
+BOARD_DSC:			CVM_L			| CVM_R
+BOARD_PROFILE_TYPE: 0				| 0
+BOARD_PROFILE_ID:	0				| 0
+S_NODE:				1				| 2
+GEOSYS_UNIT_ID:		1				| 1
+-------------------------------------------------
+CS6115AX:
+Version release: 194 [4.2.1.1]
+MN Release: MNAH0J01
+SN Release: MWJR0G03
+DB Release: YHSD0S11
+DATA Release: YHSG0A80
+Preinstallation: 
+Info: SP = MYMH0J44; MN>=MN6031AX989, MN6211AX158  
+-------------------------------------------------
+CS6115AX:
+Version release: 208 [4.2.1.3]
+MN Release: MNAH0K01
+SN Release: MWJR0G03
+DB Release: YHSD0S11
+DATA Release: YHSG0A80
+Preinstallation: 
+Info: SP = MYMH0J44; MN>=MN6031AX989, MN6211AX158  + RPM  
+-------------------------------------------------
+CS6115AX:
+Version release: 213 [4.2.1.4]
+MN Release: MNAH0K02
+SN Release: MWJR0G03
+DB Release: YHSD0S11
+DATA Release: YHSG0A80
+Preinstallation: 
+Info: SP = MYMH0J44; MN>=MN6031AX989, MN6211AX158  + RPM  
+-------------------------------------------------

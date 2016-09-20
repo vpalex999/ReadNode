@@ -1,9 +1,0 @@
-'19362','1','libcharge.so','adapter','AMA','group = amausers',NULL,NULL,NULL,NULL,NULL,NULL,NULL
-'19362','2','libcharge.so','Performance adapter','STAT','group = performanceusers',NULL,NULL,NULL,NULL,NULL,NULL,NULL
-'19362','3','libcharge.so','MOB adapter','MOB','group = mobusers',NULL,NULL,NULL,NULL,NULL,NULL,NULL
-'19362','4','libcharge.so','Centrex adapter','CENTREX',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
-'19362','5','libcharge.so','ALL adapter','ALL',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
-'19362','6','libcdrmediation.so','CDR mediation',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
-'19362','7','libewsdmediation.so','EWSD mediation',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
-'19362','8','libxmlmediation.so','XML mediation',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
-'19362','9','libunlmediation.so','UNL mediation',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL

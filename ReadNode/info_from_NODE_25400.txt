@@ -1,9 +1,0 @@
--------------------------------------------------
-NODEID:				25400
-NODENAME:			vlad-cs
-HOSTNAME:			vlad-cs
-HOSTNAME1:			vlad-cs1
-HOSTNAME2:			vlad-cs2
-GEOSYS_UNIT_ID:		1
-DB_RELEASE:			
-DATA_RELEASE:		
