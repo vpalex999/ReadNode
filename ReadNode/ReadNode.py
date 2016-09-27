@@ -2,7 +2,7 @@
 import sys, os
 import argparse # работаем с аргументами командной строки
 import xlrd     # работаем с XLS документом на чтение
-version = "0.0.2"
+version = "0.0.3"
 
 class ReadNode(object):
     #здесь храним информацию из таблицы node.dat
@@ -30,7 +30,7 @@ class ReadNode(object):
      # Здесь смотрим информацию о структуре полей из таблицы board.dat для CCS
 
      # Здесь в словаре смотрим расшифровку кода к типу платы из значения BOARD_TYPE
-     boardtypeid = {"54":"CVH или CVI","85":"CVK","97":"CVM","72":"CVJ",}
+     boardtypeid = {"54":"CVH или CVI","85":"CVK","97":"CVM","72":"CVJ","44":"CMF"}
 
 
      boardCS=[]
