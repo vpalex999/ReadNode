@@ -28,9 +28,10 @@ class ReadNode(object):
      #              "BOARD_PROFILE_TYPE":"", "BOARD_PROFILE_ID":""}]
      #
      # Здесь смотрим информацию о структуре полей из таблицы board.dat для CCS
-
+     #  
      # Здесь в словаре смотрим расшифровку кода к типу платы из значения BOARD_TYPE
-     boardtypeid = {"54":"CVH или CVI","85":"CVK","97":"CVM","72":"CVJ","44":"CMF"}
+     boardtypeid = {"54":"CVH или CVI","85":"CVK","97":"CVM","72":"CVJ","44":"CMF","83":"CMI","56":"CME"}
+     mg8E1=["UTA6080AB","UTA6097AB"]
 
 
      boardCS=[]
@@ -52,11 +53,20 @@ class ReadNode(object):
          #self.typenode = typenode.lower()
          
     # расшифровка кода типа платы из значения BOARD_TYPE 
-     def boardtipeidtotype(self, boardtype): 
-         texttype="неизвестный тип :("
+     def boardtipeidtotype(self, boardtype,typenode,act_board_id): 
+         texttype="неизвестный тип :(   для однозначного определения типа платы дать в консоли команду: app; ./systemState"
          for id in self.boardtypeid: # перебираем значения BOARD_TYPE из словаря
              if boardtype == id:     # сравниваем с актуальным значением  BOARD_TYPE из таблицы board 
                  texttype = self.boardtypeid[id] # если сходится, то берем из словаря текстовое значение
+             if id=='54' and typenode=='cs' and act_board_id=='E24273-011': #дополнительно определяем тип CVI по act_board_id
+                 texttype="CVI"
+         if typenode =="mg": # определяет тип платы MG 8xE1
+                 if len(act_board_id)>=9:  # если в таблице есть есть актуальный тип платы (UTA6080XX)
+                    for mg in self.mg8E1:
+                        if mg==act_board_id[0:9]:
+                            texttype = texttype + " 8xE1"
+                            
+                         
          return texttype    
 
 # функция удаляет знак переноса каретки \n в конце строки и форматирует
@@ -220,14 +230,15 @@ class ReadNode(object):
          # временный массив для сохранения и печати подготовленных отформатированных строк
          board = []
          if self.typenode == 'cs' or self.typenode == "mg":  
-             boardCS = self.boardCS          
+             boardCS = self.boardCS
+             typenode=self.typenode          
              #boardtext = self.boardtipeidtotype(boardCS[0]["BOARD_TYPE"])
              # форматирование строк с данными и добавление в массив board
              board.append("-------------------------------------------------")
              board.append('BOARDNR:\t\t\t'+boardCS[0]['BOARDNR']+'\t\t\t\t| '+boardCS[1]['BOARDNR'])
              board.append('PARENT_BOARDNR:\t\t'+boardCS[0]["PARENT_BOARDNR"]+'\t\t\t| '+boardCS[1]["PARENT_BOARDNR"])
              board.append('BOARD_POS:\t\t\t'+boardCS[0]["BOARD_POS"]+'\t\t\t\t| '+boardCS[1]["BOARD_POS"])
-             board.append('BOARD_TYPE:\t\t\t'+boardCS[0]["BOARD_TYPE"]+'\t\t\t\t| '+boardCS[1]["BOARD_TYPE"]+'\t board type = '+self.boardtipeidtotype(boardCS[0]["BOARD_TYPE"]))
+             board.append('BOARD_TYPE:\t\t\t'+boardCS[0]["BOARD_TYPE"]+'\t\t\t\t| '+boardCS[1]["BOARD_TYPE"]+'\t board type = '+self.boardtipeidtotype(boardCS[0]["BOARD_TYPE"],typenode, boardCS[0]["ACT_BOARD_ID"]))
              board.append('BOARD_EQUIP:\t\t'+boardCS[0]["BOARD_EQUIP"]+'\t\t\t\t| '+boardCS[1]["BOARD_EQUIP"])
              board.append('BOARD_OOSI:\t\t\t'+boardCS[0]["BOARD_OOSI"]+'\t\t\t\t| '+boardCS[1]["BOARD_OOSI"])
              board.append('REQ_BOARD_ID:\t\t'+boardCS[0]["REQ_BOARD_ID"]+'\t\t| '+boardCS[1]["REQ_BOARD_ID"])
