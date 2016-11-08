@@ -2,7 +2,7 @@
 import sys, os
 import argparse # работаем с аргументами командной строки
 import xlrd     # работаем с XLS документом на чтение
-version = "0.0.3"
+versioncode="0.0.3"
 
 class ReadNode(object):
     #здесь храним информацию из таблицы node.dat
@@ -30,7 +30,7 @@ class ReadNode(object):
      # Здесь смотрим информацию о структуре полей из таблицы board.dat для CCS
      #  
      # Здесь в словаре смотрим расшифровку кода к типу платы из значения BOARD_TYPE
-     boardtypeid = {"54":"CVH или CVI","85":"CVK","97":"CVM","72":"CVJ","44":"CMF","83":"CMI","56":"CME"}
+     boardtypeid = {"54":"CVH или CVI","85":"CVK","97":"CVM","72":"CVJ","64":"CMF","83":"CMI","56":"CME"}
      mg8E1=["UTA6080AB","UTA6097AB"]
 
 
@@ -47,10 +47,15 @@ class ReadNode(object):
 # инициализация, принимает как аргумент путь и деректорию
 # где находятся файлы экспорта
 #
-     def __init__(self, namedir, typenode="default"):
+     def __init__(self, versioncode,namedir, typenode="default"):
          self.namedir = namedir
          self.typenode = typenode
+         self.versioncode = versioncode
          #self.typenode = typenode.lower()
+
+     def printversion(self, file_node):
+         file_node.write("ReadNode. version: "+self.versioncode+"\n")
+         
          
     # расшифровка кода типа платы из значения BOARD_TYPE 
      def boardtipeidtotype(self, boardtype,typenode,act_board_id): 
@@ -275,6 +280,7 @@ class ReadNode(object):
              tmpfile= "info_from_NODE_"+self.dicnode["NODEID"]+".txt"
              try:
                  file_node =open(tmpfile,"w")
+                 self.printversion(file_node)
                  self.print_node(file_node)
                  self.print_ne_hostname(self.dicnehostname,file_node)
                  self.print_mn_node_version(self.dicmnnodeversion,file_node)
@@ -414,7 +420,7 @@ def createParser():
     parent_group.add_argument('--help','-h',action='help',help='Справка')
     parser.add_argument('directory', help="Обязательный параметр: Имя папки с экспортом. Например: ne5101.") # первый обязательный аргумент указывает директорию экспорта
     parser.add_argument('-t', choices=['CS','cs','CCS','ccs','MG','mg'], help="Необязательный параметр: Тип узла - CS,CCS,MG. Например: -t cs. ") # второй аргумент определяет тип узла: CS, CCS, MG
-    parser.add_argument('--version','-v', action = 'version',help = 'Вывести номер версии',version = '%(prog)s {}'.format(version)) # показывают версию
+    parser.add_argument('--version','-v', action = 'version',help = 'Вывести номер версии',version = '%(prog)s {}'.format(versioncode)) # показывают версию
     return parser
 # END Parser
 
@@ -431,9 +437,9 @@ if __name__ == '__main__':
         # если в командной строке указывается дополнительный(необязательный аргумент) -  тип экспорта напримет: -t cs
         if namespace.t:
             typenode = namespace.t.lower() # перевод в строчный формат          
-            my_node = ReadNode(namespace.directory,typenode) # создаём экземпляр класса c типом узла указанным в аргументе -t:  cs, mg, ....
+            my_node = ReadNode(versioncode,namespace.directory,typenode) # создаём экземпляр класса c типом узла указанным в аргументе -t:  cs, mg, ....
         else:
-            my_node = ReadNode(namespace.directory) # если нет дополнительного аргумента с типом узла, то создаем объект только с указанием расположения директории экспорта
+            my_node = ReadNode(versioncode,namespace.directory) # если нет дополнительного аргумента с типом узла, то создаем объект только с указанием расположения директории экспорта
             # если файл mn_node_version.dat читается и не пустой
         if my_node.read_mn_node_version():
             my_node.read_release_xml() #  то пытаемся определить тип экспорта и версию пакета в файле 'Версии ПО MN V5_6.xls'                       
