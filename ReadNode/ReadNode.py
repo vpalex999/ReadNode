@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-import sys, os
+import sys
+import os
 import argparse # работаем с аргументами командной строки
 import xlrd     # работаем с XLS документом на чтение
 versioncode="0.0.3"
@@ -12,7 +13,7 @@ class ReadNode(object):
      dicnehostname={"NODEID":"","HOSTNAME":"","HOSTNAME1":"","HOSTNAME2":"","GEOSYS_UNIT_ID":""}
 
     #здесь храним информацию из таблицы mn_node_version.dat
-     dicmnnodeversion = {"DB_RELEASE":"","DATA_RELEASE":""}
+     dicmnnodeversion={"DB_RELEASE":"","DATA_RELEASE":""}
 
      # Здесь смотрим информацию о структуре полей из таблицы board.dat для CS
      # tableboard=[{"NODEID":"", "BOARDNR":"", "PARENT_BOARDNR":"", "BOARD_POS":"", "BOARD_TYPE":"", "BOARD_EQUIP":"",
@@ -194,7 +195,7 @@ class ReadNode(object):
              if os.path.isfile(node_path):
                 try:
                     with open(node_path,"r")as nodes: # читаем  файл
-                        temp_strings = nodes.readlines()     # читаем миссив из файла                     
+                        temp_strings = nodes.readlines()     # читаем в миссив из файла                     
                         #read_board_type(temp_strings,self.typenode)
                         
                         if self.typenode == 'cs' or self.typenode == "mg":
@@ -224,7 +225,7 @@ class ReadNode(object):
                                  boardCSlocal["GEOSYS_UNIT_ID"]=""
                                # добавляем словрь в массив boardCS
                                self.boardCS.append(boardCSlocal)  
-                        else: print("Не удалось автомаически распознать тип продукта,\n\
+                        else: print("Не удалось автоматически распознать тип продукта,\n\
 попробуйте указать тип узла явным образом используя дополнительный аргумент: -t [cs,ccs,mg]")                     
                 except Exception:
                     print("\nПроблема с чтением файла: "+node_path+"\n")
