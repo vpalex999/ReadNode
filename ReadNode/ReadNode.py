@@ -234,28 +234,62 @@ class ReadNode(object):
      # печать с форматированием данных board.dat
      def print_board(self,file_node): 
          # временный массив для сохранения и печати подготовленных отформатированных строк
-         board = []
-         if self.typenode == 'cs' or self.typenode == "mg":  
+         board = [
+                    "-------------------------------------------------",
+                    'BOARDNR:\t\t\t',
+                    'PARENT_BOARDNR:\t\t',
+                    'BOARD_POS:\t\t\t',
+                    'BOARD_TYPE:\t\t\t',
+                    'BOARD_EQUIP:\t\t',
+                    'BOARD_OOSI:\t\t\t',
+                    'REQ_BOARD_ID:\t\t',
+                    'ACT_BOARD_ID:\t\t',
+                    'BOARD_SERIALNR:\t\t',
+                    'BOARD_DSC:\t\t\t',
+                    'BOARD_PROFILE_TYPE: ',
+                    'BOARD_PROFILE_ID:\t',
+                    'S_NODE:\t\t\t\t',
+                    'GEOSYS_UNIT_ID:\t\t',
+                    "-------------------------------------------------"
+             ]
+         if self.typenode == 'cs' or self.typenode == "mg":
              boardCS = self.boardCS
              typenode=self.typenode          
              #boardtext = self.boardtipeidtotype(boardCS[0]["BOARD_TYPE"])
              # форматирование строк с данными и добавление в массив board
-             board.append("-------------------------------------------------")
-             board.append('BOARDNR:\t\t\t'+boardCS[0]['BOARDNR']+'\t\t\t\t| '+boardCS[1]['BOARDNR'])
-             board.append('PARENT_BOARDNR:\t\t'+boardCS[0]["PARENT_BOARDNR"]+'\t\t\t| '+boardCS[1]["PARENT_BOARDNR"])
-             board.append('BOARD_POS:\t\t\t'+boardCS[0]["BOARD_POS"]+'\t\t\t\t| '+boardCS[1]["BOARD_POS"])
-             board.append('BOARD_TYPE:\t\t\t'+boardCS[0]["BOARD_TYPE"]+'\t\t\t\t| '+boardCS[1]["BOARD_TYPE"]+'\t board type = '+self.boardtipeidtotype(boardCS[0]["BOARD_TYPE"],typenode, boardCS[0]["ACT_BOARD_ID"]))
-             board.append('BOARD_EQUIP:\t\t'+boardCS[0]["BOARD_EQUIP"]+'\t\t\t\t| '+boardCS[1]["BOARD_EQUIP"])
-             board.append('BOARD_OOSI:\t\t\t'+boardCS[0]["BOARD_OOSI"]+'\t\t\t\t| '+boardCS[1]["BOARD_OOSI"])
-             board.append('REQ_BOARD_ID:\t\t'+boardCS[0]["REQ_BOARD_ID"]+'\t\t| '+boardCS[1]["REQ_BOARD_ID"])
-             board.append('ACT_BOARD_ID:\t\t'+boardCS[0]["ACT_BOARD_ID"]+'\t\t| '+boardCS[1]["ACT_BOARD_ID"])
-             board.append('BOARD_SERIALNR:\t\t'+boardCS[0]["BOARD_SERIALNR"]+'\t| '+boardCS[1]["BOARD_SERIALNR"])
-             board.append('BOARD_DSC:\t\t\t'+boardCS[0]["BOARD_DSC"]+'\t\t\t| '+boardCS[1]["BOARD_DSC"])
-             board.append('BOARD_PROFILE_TYPE: '+boardCS[0]["BOARD_PROFILE_TYPE"]+'\t\t\t\t| '+boardCS[1]["BOARD_PROFILE_TYPE"])
-             board.append('BOARD_PROFILE_ID:\t'+boardCS[0]["BOARD_PROFILE_ID"]+'\t\t\t\t| '+boardCS[1]["BOARD_PROFILE_ID"])
-             board.append('S_NODE:\t\t\t\t'+boardCS[0]["S_NODE"]+'\t\t\t\t| '+boardCS[1]["S_NODE"])
-             board.append('GEOSYS_UNIT_ID:\t\t'+boardCS[0]["GEOSYS_UNIT_ID"]+'\t\t\t\t| '+boardCS[1]["GEOSYS_UNIT_ID"])
-             board.append("-------------------------------------------------")
+             
+             for i in boardCS:
+                board[1]+=i["BOARDNR"]+'\t\t\t\t| '
+                board[2]+=i["PARENT_BOARDNR"]+'\t\t\t| '
+                board[3]+=i["BOARD_POS"]+'\t\t\t\t| '
+                board[4]+=i["BOARD_TYPE"]+'\t\t\t\t| '
+                board[5]+=i["BOARD_EQUIP"]+'\t\t\t\t| '
+                board[6]+=i["BOARD_OOSI"]+'\t\t\t\t| '
+                board[7]+=i["REQ_BOARD_ID"]+'\t\t| '
+                board[8]+=i["ACT_BOARD_ID"]+'\t\t| '
+                board[9]+=i["BOARD_SERIALNR"]+'\t| '
+                board[10]+=i["BOARD_DSC"]+'\t\t\t| '
+                board[11]+=i["BOARD_PROFILE_TYPE"]+'\t\t\t\t| '
+                board[12]+=i["BOARD_PROFILE_ID"]+'\t\t\t\t| '
+                board[13]+=i["S_NODE"]+'\t\t\t\t| '
+                board[14]+=i["GEOSYS_UNIT_ID"]+'\t\t\t\t| '
+           
+             #board.append("-------------------------------------------------")
+             #board.append('BOARDNR:\t\t\t'+boardCS[0]['BOARDNR']+'\t\t\t\t| '+boardCS[1]['BOARDNR'])
+             #board.append('PARENT_BOARDNR:\t\t'+boardCS[0]["PARENT_BOARDNR"]+'\t\t\t| '+boardCS[1]["PARENT_BOARDNR"])
+             #board.append('BOARD_POS:\t\t\t'+boardCS[0]["BOARD_POS"]+'\t\t\t\t| '+boardCS[1]["BOARD_POS"])
+             #board.append('BOARD_TYPE:\t\t\t'+boardCS[0]["BOARD_TYPE"]+'\t\t\t\t| '+boardCS[1]["BOARD_TYPE"]+'\t board type = '+self.boardtipeidtotype(boardCS[0]["BOARD_TYPE"],typenode, boardCS[0]["ACT_BOARD_ID"]))
+             #board.append('BOARD_EQUIP:\t\t'+boardCS[0]["BOARD_EQUIP"]+'\t\t\t\t| '+boardCS[1]["BOARD_EQUIP"])
+             #board.append('BOARD_OOSI:\t\t\t'+boardCS[0]["BOARD_OOSI"]+'\t\t\t\t| '+boardCS[1]["BOARD_OOSI"])
+             #board.append('REQ_BOARD_ID:\t\t'+boardCS[0]["REQ_BOARD_ID"]+'\t\t| '+boardCS[1]["REQ_BOARD_ID"])
+             #board.append('ACT_BOARD_ID:\t\t'+boardCS[0]["ACT_BOARD_ID"]+'\t\t| '+boardCS[1]["ACT_BOARD_ID"])
+             #board.append('BOARD_SERIALNR:\t\t'+boardCS[0]["BOARD_SERIALNR"]+'\t| '+boardCS[1]["BOARD_SERIALNR"])
+             #board.append('BOARD_DSC:\t\t\t'+boardCS[0]["BOARD_DSC"]+'\t\t\t| '+boardCS[1]["BOARD_DSC"])
+             #board.append('BOARD_PROFILE_TYPE: '+boardCS[0]["BOARD_PROFILE_TYPE"]+'\t\t\t\t| '+boardCS[1]["BOARD_PROFILE_TYPE"])
+             #board.append('BOARD_PROFILE_ID:\t'+boardCS[0]["BOARD_PROFILE_ID"]+'\t\t\t\t| '+boardCS[1]["BOARD_PROFILE_ID"])
+             #board.append('S_NODE:\t\t\t\t'+boardCS[0]["S_NODE"]+'\t\t\t\t| '+boardCS[1]["S_NODE"])
+             #board.append('GEOSYS_UNIT_ID:\t\t'+boardCS[0]["GEOSYS_UNIT_ID"]+'\t\t\t\t| '+boardCS[1]["GEOSYS_UNIT_ID"])
+             #board.append("-------------------------------------------------")
 
              # цикл для записи в файл массива board
              for item in board:
