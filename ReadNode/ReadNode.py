@@ -236,20 +236,20 @@ class ReadNode(object):
          # временный массив для сохранения и печати подготовленных отформатированных строк
          board = [
                     "-------------------------------------------------",
-                    'BOARDNR:\t\t\t',
-                    'PARENT_BOARDNR:\t\t',
-                    'BOARD_POS:\t\t\t',
-                    'BOARD_TYPE:\t\t\t',
-                    'BOARD_EQUIP:\t\t',
-                    'BOARD_OOSI:\t\t\t',
-                    'REQ_BOARD_ID:\t\t',
-                    'ACT_BOARD_ID:\t\t',
-                    'BOARD_SERIALNR:\t\t',
-                    'BOARD_DSC:\t\t\t',
-                    'BOARD_PROFILE_TYPE: ',
-                    'BOARD_PROFILE_ID:\t',
-                    'S_NODE:\t\t\t\t',
-                    'GEOSYS_UNIT_ID:\t\t',
+                    'BOARDNR:\t\t\t|',
+                    'PARENT_BOARDNR:\t\t|',
+                    'BOARD_POS:\t\t\t|',
+                    'BOARD_TYPE:\t\t\t|',
+                    'BOARD_EQUIP:\t\t|',
+                    'BOARD_OOSI:\t\t\t|',
+                    'REQ_BOARD_ID:\t\t|',
+                    'ACT_BOARD_ID:\t\t|',
+                    'BOARD_SERIALNR:\t\t|',
+                    'BOARD_DSC:\t\t\t|',
+                    'BOARD_PROFILE_TYPE: |',
+                    'BOARD_PROFILE_ID:\t|',
+                    'S_NODE:\t\t\t\t|',
+                    'GEOSYS_UNIT_ID:\t\t|',
                     "-------------------------------------------------"
              ]
          if self.typenode == 'cs' or self.typenode == "mg":
@@ -259,20 +259,35 @@ class ReadNode(object):
              # форматирование строк с данными и добавление в массив board
              
              for i in boardCS:
-                board[1]+=i["BOARDNR"]+'\t\t\t\t| '
-                board[2]+=i["PARENT_BOARDNR"]+'\t\t\t| '
-                board[3]+=i["BOARD_POS"]+'\t\t\t\t| '
-                board[4]+=i["BOARD_TYPE"]+'\t\t\t\t| '
-                board[5]+=i["BOARD_EQUIP"]+'\t\t\t\t| '
-                board[6]+=i["BOARD_OOSI"]+'\t\t\t\t| '
-                board[7]+=i["REQ_BOARD_ID"]+'\t\t| '
-                board[8]+=i["ACT_BOARD_ID"]+'\t\t| '
-                board[9]+=i["BOARD_SERIALNR"]+'\t| '
-                board[10]+=i["BOARD_DSC"]+'\t\t\t| '
-                board[11]+=i["BOARD_PROFILE_TYPE"]+'\t\t\t\t| '
-                board[12]+=i["BOARD_PROFILE_ID"]+'\t\t\t\t| '
-                board[13]+=i["S_NODE"]+'\t\t\t\t| '
-                board[14]+=i["GEOSYS_UNIT_ID"]+'\t\t\t\t| '
+                 board[1]+=i["BOARDNR"]+'|'
+                 board[2]+=i["PARENT_BOARDNR"]+'|'
+                 board[3]+=i["BOARD_POS"]+'|'
+                 board[4]+=i["BOARD_TYPE"]+'|'
+                 board[5]+=i["BOARD_EQUIP"]+'|'
+                 board[6]+=i["BOARD_OOSI"]+'|'
+                 board[7]+=i["REQ_BOARD_ID"]+'|'
+                 board[8]+=i["ACT_BOARD_ID"]+'|'
+                 board[9]+=i["BOARD_SERIALNR"]+'|'
+                 board[10]+=i["BOARD_DSC"]+'|'
+                 board[11]+=i["BOARD_PROFILE_TYPE"]+'|'
+                 board[12]+=i["BOARD_PROFILE_ID"]+'|'
+                 board[13]+=i["S_NODE"]+'|'
+                 board[14]+=i["GEOSYS_UNIT_ID"]+'|'
+
+                #board[1]+=i["BOARDNR"]+'\t\t\t\t| '
+                #board[2]+=i["PARENT_BOARDNR"]+'\t\t\t| '
+                #board[3]+=i["BOARD_POS"]+'\t\t\t\t| '
+                #board[4]+=i["BOARD_TYPE"]+'\t\t\t\t| '
+                #board[5]+=i["BOARD_EQUIP"]+'\t\t\t\t| '
+                #board[6]+=i["BOARD_OOSI"]+'\t\t\t\t| '
+                #board[7]+=i["REQ_BOARD_ID"]+'\t\t| '
+                #board[8]+=i["ACT_BOARD_ID"]+'\t\t| '
+                #board[9]+=i["BOARD_SERIALNR"]+'\t| '
+                #board[10]+=i["BOARD_DSC"]+'\t\t\t| '
+                #board[11]+=i["BOARD_PROFILE_TYPE"]+'\t\t\t\t| '
+                #board[12]+=i["BOARD_PROFILE_ID"]+'\t\t\t\t| '
+                #board[13]+=i["S_NODE"]+'\t\t\t\t| '
+                #board[14]+=i["GEOSYS_UNIT_ID"]+'\t\t\t\t| '
            
              #board.append("-------------------------------------------------")
              #board.append('BOARDNR:\t\t\t'+boardCS[0]['BOARDNR']+'\t\t\t\t| '+boardCS[1]['BOARDNR'])
@@ -488,7 +503,7 @@ if __name__ == '__main__':
         my_node.print_nodes() # Печатаем обработанные данные
            
     else:
-        print("каталог "+namespace.d+" не существует\n")
+        print("Директория "+namespace.directory+"  - не существует\n")
   else: # Если в командной строке нет аргументов, то выводим help
       parser.print_help()
 
