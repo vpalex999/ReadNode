@@ -185,8 +185,11 @@ class ReadNode(object):
              for item in version:
                file_node.write(item+"\n")
 
-     #def read_board_type(tempstring,typenode):
-     #    self
+     # делаем разметку каждого столбца в 12 знаков
+     def add_space_char(self,string):
+         if len(string)<=12:
+             new_str=string+" "*(12-len(string))
+         return new_str
 
      # читаем таблицу board.dat          
      def read_board(self):
@@ -204,22 +207,22 @@ class ReadNode(object):
                                # создаем пустой словарь   
                                boardCSlocal={}
                                # добавляем в словарь информацию о плате(board) 
-                               boardCSlocal["NODEID"]=temp_string[0]
-                               boardCSlocal["BOARDNR"]=temp_string[1]
-                               boardCSlocal["PARENT_BOARDNR"]=temp_string[2]
-                               boardCSlocal["BOARD_POS"]=temp_string[3]
-                               boardCSlocal["BOARD_TYPE"]=temp_string[4]
-                               boardCSlocal["BOARD_EQUIP"]=temp_string[5]
-                               boardCSlocal["BOARD_OOSI"]=temp_string[6]
-                               boardCSlocal["REQ_BOARD_ID"]=temp_string[7]
-                               boardCSlocal["ACT_BOARD_ID"]=temp_string[8]
-                               boardCSlocal["BOARD_SERIALNR"]=temp_string[9]
-                               boardCSlocal["BOARD_DSC"]=temp_string[10]
-                               boardCSlocal["BOARD_PROFILE_TYPE"]=temp_string[11]
-                               boardCSlocal["BOARD_PROFILE_ID"]=temp_string[12]
+                               boardCSlocal["NODEID"]= self.add_space_char(temp_string[0])
+                               boardCSlocal["BOARDNR"]=self.add_space_char(temp_string[1])
+                               boardCSlocal["PARENT_BOARDNR"]=self.add_space_char(temp_string[2])
+                               boardCSlocal["BOARD_POS"]=self.add_space_char(temp_string[3])
+                               boardCSlocal["BOARD_TYPE"]=self.add_space_char(temp_string[4])
+                               boardCSlocal["BOARD_EQUIP"]=self.add_space_char(temp_string[5])
+                               boardCSlocal["BOARD_OOSI"]=self.add_space_char(temp_string[6])
+                               boardCSlocal["REQ_BOARD_ID"]=self.add_space_char(temp_string[7])
+                               boardCSlocal["ACT_BOARD_ID"]=self.add_space_char(temp_string[8])
+                               boardCSlocal["BOARD_SERIALNR"]=self.add_space_char(temp_string[9])
+                               boardCSlocal["BOARD_DSC"]=self.add_space_char(temp_string[10])
+                               boardCSlocal["BOARD_PROFILE_TYPE"]=self.add_space_char(temp_string[11])
+                               boardCSlocal["BOARD_PROFILE_ID"]=self.add_space_char(temp_string[12])
                                if len(temp_string) > 13:
-                                 boardCSlocal["S_NODE"]=temp_string[13]
-                                 boardCSlocal["GEOSYS_UNIT_ID"]=temp_string[14]
+                                 boardCSlocal["S_NODE"]=self.add_space_char(temp_string[13])
+                                 boardCSlocal["GEOSYS_UNIT_ID"]=self.add_space_char(temp_string[14])
                                else:
                                  boardCSlocal["S_NODE"]=""
                                  boardCSlocal["GEOSYS_UNIT_ID"]=""
@@ -274,38 +277,7 @@ class ReadNode(object):
                  board[13]+=i["S_NODE"]+'|'
                  board[14]+=i["GEOSYS_UNIT_ID"]+'|'
 
-                #board[1]+=i["BOARDNR"]+'\t\t\t\t| '
-                #board[2]+=i["PARENT_BOARDNR"]+'\t\t\t| '
-                #board[3]+=i["BOARD_POS"]+'\t\t\t\t| '
-                #board[4]+=i["BOARD_TYPE"]+'\t\t\t\t| '
-                #board[5]+=i["BOARD_EQUIP"]+'\t\t\t\t| '
-                #board[6]+=i["BOARD_OOSI"]+'\t\t\t\t| '
-                #board[7]+=i["REQ_BOARD_ID"]+'\t\t| '
-                #board[8]+=i["ACT_BOARD_ID"]+'\t\t| '
-                #board[9]+=i["BOARD_SERIALNR"]+'\t| '
-                #board[10]+=i["BOARD_DSC"]+'\t\t\t| '
-                #board[11]+=i["BOARD_PROFILE_TYPE"]+'\t\t\t\t| '
-                #board[12]+=i["BOARD_PROFILE_ID"]+'\t\t\t\t| '
-                #board[13]+=i["S_NODE"]+'\t\t\t\t| '
-                #board[14]+=i["GEOSYS_UNIT_ID"]+'\t\t\t\t| '
-           
-             #board.append("-------------------------------------------------")
-             #board.append('BOARDNR:\t\t\t'+boardCS[0]['BOARDNR']+'\t\t\t\t| '+boardCS[1]['BOARDNR'])
-             #board.append('PARENT_BOARDNR:\t\t'+boardCS[0]["PARENT_BOARDNR"]+'\t\t\t| '+boardCS[1]["PARENT_BOARDNR"])
-             #board.append('BOARD_POS:\t\t\t'+boardCS[0]["BOARD_POS"]+'\t\t\t\t| '+boardCS[1]["BOARD_POS"])
-             #board.append('BOARD_TYPE:\t\t\t'+boardCS[0]["BOARD_TYPE"]+'\t\t\t\t| '+boardCS[1]["BOARD_TYPE"]+'\t board type = '+self.boardtipeidtotype(boardCS[0]["BOARD_TYPE"],typenode, boardCS[0]["ACT_BOARD_ID"]))
-             #board.append('BOARD_EQUIP:\t\t'+boardCS[0]["BOARD_EQUIP"]+'\t\t\t\t| '+boardCS[1]["BOARD_EQUIP"])
-             #board.append('BOARD_OOSI:\t\t\t'+boardCS[0]["BOARD_OOSI"]+'\t\t\t\t| '+boardCS[1]["BOARD_OOSI"])
-             #board.append('REQ_BOARD_ID:\t\t'+boardCS[0]["REQ_BOARD_ID"]+'\t\t| '+boardCS[1]["REQ_BOARD_ID"])
-             #board.append('ACT_BOARD_ID:\t\t'+boardCS[0]["ACT_BOARD_ID"]+'\t\t| '+boardCS[1]["ACT_BOARD_ID"])
-             #board.append('BOARD_SERIALNR:\t\t'+boardCS[0]["BOARD_SERIALNR"]+'\t| '+boardCS[1]["BOARD_SERIALNR"])
-             #board.append('BOARD_DSC:\t\t\t'+boardCS[0]["BOARD_DSC"]+'\t\t\t| '+boardCS[1]["BOARD_DSC"])
-             #board.append('BOARD_PROFILE_TYPE: '+boardCS[0]["BOARD_PROFILE_TYPE"]+'\t\t\t\t| '+boardCS[1]["BOARD_PROFILE_TYPE"])
-             #board.append('BOARD_PROFILE_ID:\t'+boardCS[0]["BOARD_PROFILE_ID"]+'\t\t\t\t| '+boardCS[1]["BOARD_PROFILE_ID"])
-             #board.append('S_NODE:\t\t\t\t'+boardCS[0]["S_NODE"]+'\t\t\t\t| '+boardCS[1]["S_NODE"])
-             #board.append('GEOSYS_UNIT_ID:\t\t'+boardCS[0]["GEOSYS_UNIT_ID"]+'\t\t\t\t| '+boardCS[1]["GEOSYS_UNIT_ID"])
-             #board.append("-------------------------------------------------")
-
+                
              # цикл для записи в файл массива board
              for item in board:
                  file_node.write(item+"\n")       
