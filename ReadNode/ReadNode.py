@@ -61,6 +61,9 @@ class ReadNode(object):
     # расшифровка кода типа платы из значения BOARD_TYPE 
      def boardtipeidtotype(self, boardtype,typenode,act_board_id): 
          texttype="неизвестный тип :(   для однозначного определения типа платы дать в консоли команду: app; ./systemState"
+         
+         # вписать регулярное выражение удаляющее пробелы в конце строки
+
          for id in self.boardtypeid: # перебираем значения BOARD_TYPE из словаря
              if boardtype == id:     # сравниваем с актуальным значением  BOARD_TYPE из таблицы board 
                  texttype = self.boardtypeid[id] # если сходится, то берем из словаря текстовое значение
@@ -106,7 +109,7 @@ class ReadNode(object):
              # временный массив для сохранения и печати подготовленных отформатированных строк
              node = []
              # форматирование строк с данными и добавление в массив hostname
-             node.append('-------------------------------------------------')
+             node.append('-'*50)
              node.append("NODEID:\t\t\t\t"+ self.dicnode["NODEID"])
              node.append("NODENAME:\t\t\t"+ self.dicnode["NODENAME"])
              # цикл для записи в файл массива hostname
@@ -258,7 +261,7 @@ class ReadNode(object):
          if self.typenode == 'cs' or self.typenode == "mg":
              boardCS = self.boardCS
              typenode=self.typenode          
-             #boardtext = self.boardtipeidtotype(boardCS[0]["BOARD_TYPE"])
+             #boardtext = self.boardtipeidtotype(boardCS[0]["BOARD_TYPE"],typenode,boardCS[0]["ACT_BOARD_ID"])
              # форматирование строк с данными и добавление в массив board
              
              for i in boardCS:
