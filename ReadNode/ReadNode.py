@@ -188,11 +188,6 @@ class ReadNode(object):
              for item in version:
                file_node.write(item+"\n")
 
-     # делаем разметку каждого столбца в 12 знаков
-     def add_space_char(self,string):
-         if len(string)<=12:
-             new_str=string+" "*(12-len(string))
-         return new_str
 
      # читаем таблицу board.dat          
      def read_board(self):
@@ -210,22 +205,22 @@ class ReadNode(object):
                                # создаем пустой словарь   
                                boardCSlocal={}
                                # добавляем в словарь информацию о плате(board) 
-                               boardCSlocal["NODEID"]= self.add_space_char(temp_string[0])
-                               boardCSlocal["BOARDNR"]=self.add_space_char(temp_string[1])
-                               boardCSlocal["PARENT_BOARDNR"]=self.add_space_char(temp_string[2])
-                               boardCSlocal["BOARD_POS"]=self.add_space_char(temp_string[3])
-                               boardCSlocal["BOARD_TYPE"]=self.add_space_char(temp_string[4])
-                               boardCSlocal["BOARD_EQUIP"]=self.add_space_char(temp_string[5])
-                               boardCSlocal["BOARD_OOSI"]=self.add_space_char(temp_string[6])
-                               boardCSlocal["REQ_BOARD_ID"]=self.add_space_char(temp_string[7])
-                               boardCSlocal["ACT_BOARD_ID"]=self.add_space_char(temp_string[8])
-                               boardCSlocal["BOARD_SERIALNR"]=self.add_space_char(temp_string[9])
-                               boardCSlocal["BOARD_DSC"]=self.add_space_char(temp_string[10])
-                               boardCSlocal["BOARD_PROFILE_TYPE"]=self.add_space_char(temp_string[11])
-                               boardCSlocal["BOARD_PROFILE_ID"]=self.add_space_char(temp_string[12])
+                               boardCSlocal["NODEID"]= '{0:12s}'.format(temp_string[0])
+                               boardCSlocal["BOARDNR"]='{0:12s}'.format(temp_string[1])
+                               boardCSlocal["PARENT_BOARDNR"]='{0:12s}'.format(temp_string[2])
+                               boardCSlocal["BOARD_POS"]='{0:12s}'.format(temp_string[3])
+                               boardCSlocal["BOARD_TYPE"]='{0:12s}'.format(temp_string[4])
+                               boardCSlocal["BOARD_EQUIP"]='{0:12s}'.format(temp_string[5])
+                               boardCSlocal["BOARD_OOSI"]='{0:12s}'.format(temp_string[6])
+                               boardCSlocal["REQ_BOARD_ID"]='{0:12s}'.format(temp_string[7])
+                               boardCSlocal["ACT_BOARD_ID"]='{0:12s}'.format(temp_string[8])
+                               boardCSlocal["BOARD_SERIALNR"]='{0:12s}'.format(temp_string[9])
+                               boardCSlocal["BOARD_DSC"]='{0:12s}'.format(temp_string[10])
+                               boardCSlocal["BOARD_PROFILE_TYPE"]='{0:12s}'.format(temp_string[11])
+                               boardCSlocal["BOARD_PROFILE_ID"]='{0:12s}'.format(temp_string[12])
                                if len(temp_string) > 13:
-                                 boardCSlocal["S_NODE"]=self.add_space_char(temp_string[13])
-                                 boardCSlocal["GEOSYS_UNIT_ID"]=self.add_space_char(temp_string[14])
+                                 boardCSlocal["S_NODE"]='{0:12s}'.format(temp_string[13])
+                                 boardCSlocal["GEOSYS_UNIT_ID"]='{0:12s}'.format(temp_string[14])
                                else:
                                  boardCSlocal["S_NODE"]=""
                                  boardCSlocal["GEOSYS_UNIT_ID"]=""
@@ -241,7 +236,7 @@ class ReadNode(object):
      def print_board(self,file_node): 
          # временный массив для сохранения и печати подготовленных отформатированных строк
          board = [
-                    "-------------------------------------------------",
+                    "-"*50,
                     'BOARDNR:\t\t\t|',
                     'PARENT_BOARDNR:\t\t|',
                     'BOARD_POS:\t\t\t|',
@@ -256,7 +251,7 @@ class ReadNode(object):
                     'BOARD_PROFILE_ID:\t|',
                     'S_NODE:\t\t\t\t|',
                     'GEOSYS_UNIT_ID:\t\t|',
-                    "-------------------------------------------------"
+                    "-"*50,
              ]
          if self.typenode == 'cs' or self.typenode == "mg":
              boardCS = self.boardCS
@@ -281,7 +276,7 @@ class ReadNode(object):
                  board[14]+=i["GEOSYS_UNIT_ID"]+'|'
 
                 
-             # цикл для записи в файл массива board
+             # цикл для записи в файл отчёта массива board
              for item in board:
                  file_node.write(item+"\n")       
          else: return False
@@ -296,7 +291,7 @@ class ReadNode(object):
                          temp = item[1:]
                          for key in range(len(temp)):
                              xml.append(description_releases[key]+ temp[key])                            
-                         xml.append("-------------------------------------------------")
+                         xml.append("-"*50)
                      for item in xml:
                          file_node.write(item+"\n")
         
