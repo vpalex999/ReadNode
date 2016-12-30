@@ -4,17 +4,13 @@ import os
 import argparse # работаем с аргументами командной строки
 import xlrd     # работаем с XLS документом на чтение
 versioncode="0.0.3"
-
 class ReadNode(object):
     #здесь храним информацию из таблицы node.dat
      dicnode={"NODEID":"","NODENAME":""}
-
     #здесь храним информацию из таблицы ne_hostname.dat 
      dicnehostname={"NODEID":"","HOSTNAME":"","HOSTNAME1":"","HOSTNAME2":"","GEOSYS_UNIT_ID":""}
-
     #здесь храним информацию из таблицы mn_node_version.dat
      dicmnnodeversion={"DB_RELEASE":"","DATA_RELEASE":""}
-
      # Здесь смотрим информацию о структуре полей из таблицы board.dat для CS
      # tableboard=[{"NODEID":"", "BOARDNR":"", "PARENT_BOARDNR":"", "BOARD_POS":"", "BOARD_TYPE":"", "BOARD_EQUIP":"",
      #          "BOARD_OOSI":"", "REQ_BOARD_ID":"", "ACT_BOARD_ID":"", "BOARD_SERIALNR":"", "BOARD_DSC":"",
@@ -33,18 +29,13 @@ class ReadNode(object):
      # Здесь в словаре смотрим расшифровку кода к типу платы из значения BOARD_TYPE
      boardtypeid = {"54":"CVH или CVI","85":"CVK","97":"CVM","72":"CVJ","64":"CMF","83":"CMI","56":"CME"}
      mg8E1=["UTA6080AB","UTA6097AB"]
-
-
      boardCS=[]
      boardCCS=[]
-     
-              
      # массив с найденными релизами в xml
      releases = [] 
      version = "" # версия пакета
      # массив с описанием выводимых полей xml
      description_releases = ['Version release: ','MN Release: ','SN Release: ','DB Release: ','DATA Release: ','Preinstallation: ','Info: '] 
-
 # инициализация, принимает как аргумент путь и деректорию
 # где находятся файлы экспорта
 #
@@ -52,18 +43,13 @@ class ReadNode(object):
          self.namedir = namedir
          self.typenode = typenode
          self.versioncode = versioncode
-         #self.typenode = typenode.lower()
-
      def printversion(self, file_node):
-         file_node.write("ReadNode. version: "+self.versioncode+"\n")
-         
-         
+         file_node.write("ReadNode. version: "+self.versioncode+"\n")   
     # расшифровка кода типа платы из значения BOARD_TYPE 
      def boardtipeidtotype(self, boardtype,typenode,act_board_id): 
-         texttype="неизвестный тип :(   для однозначного определения типа платы дать в консоли команду: app; ./systemState"
-         
+         #texttype="неизвестный тип :(   для однозначного определения типа платы дать в консоли команду: app; ./systemState"
+         texttype=" "
          # вписать регулярное выражение удаляющее пробелы в конце строки
-
          for id in self.boardtypeid: # перебираем значения BOARD_TYPE из словаря
              if boardtype == id:     # сравниваем с актуальным значением  BOARD_TYPE из таблицы board 
                  texttype = self.boardtypeid[id] # если сходится, то берем из словаря текстовое значение
@@ -73,11 +59,8 @@ class ReadNode(object):
                  if len(act_board_id)>=9:  # если в таблице есть есть актуальный тип платы (UTA6080XX)
                     for mg in self.mg8E1:
                         if mg==act_board_id[0:9]:
-                            texttype = texttype + " 8xE1"
-                            
-                         
+                            texttype = texttype + " 8xE1"                     
          return texttype    
-
 # функция удаляет знак переноса каретки \n в конце строки и форматирует
      def formatstring(self,temp_string):
           i =0
@@ -86,9 +69,6 @@ class ReadNode(object):
                     temp_item += temp_string[key]
           temp_item = temp_item.replace("\'","").split(",") # удаляем '
           return temp_item
-
-    
-
      # читаем таблицу node.dat 
      def read_node(self):
              node_path = self.namedir+'\\node.dat' #строим путь до файла
@@ -103,7 +83,6 @@ class ReadNode(object):
                 except Exception:
                    print("\nПроблема с чтением файла: "+node_path+"\n")
              else: print("\nОтсутствует файл: %s\n" %node_path)
-
      # печать с форматированием данных node.dat
      def print_node(self,file_node):
              # временный массив для сохранения и печати подготовленных отформатированных строк
@@ -114,8 +93,7 @@ class ReadNode(object):
              node.append("NODENAME:\t\t\t"+ self.dicnode["NODENAME"])
              # цикл для записи в файл массива hostname
              for item in node:
-                 file_node.write(item+"\n")         
-        
+                 file_node.write(item+"\n")           
      # читаем таблицу ne_hostname.dat
      def read_ne_hostname(self):
              node_path = self.namedir+'\\ne_hostname.dat' #строим путь до файла
@@ -134,7 +112,6 @@ class ReadNode(object):
                   except Exception:
                          print("\nПроблема с чтением файла: "+node_path+"\n")
              else: print("\nОтсутствует файл: %s\n" %node_path)
-
      # печать с форматированием данных ne_hostname.dat
      def print_ne_hostname(self,dict,file_node):
           # временный массив для сохранения и печати подготовленных отформатированных строк
@@ -147,14 +124,12 @@ class ReadNode(object):
           # цикл для записи в файл массива hostname
           for item in hostname:
                file_node.write(item+"\n")
-
      # читаем таблицу mn_node_version.dat                            
      def read_mn_node_version(self):
                node_path = self.namedir+'\\mn_node_version.dat' #строим путь до файла
                # если файл существует
                if os.path.isfile(node_path):
-                  try:
-                           
+                  try:                     
                       with open(node_path,"r")as nodes: # читаем  файл
                           temp_string = nodes.readline() # удаляем '
                           temp_string = self.formatstring(temp_string) # формат строки
@@ -169,14 +144,12 @@ class ReadNode(object):
                       else: 
                           print("Файл mn_node_version.dat пустой")
                           return False
-
                   except Exception:
                       print("\nПроблема с чтением файла: "+node_path+"\n")
                       return False
                else: 
                    print("\nОтсутствует файл: %s\n" %node_path)
                    return False
-
      # печать с форматированием данных mn_node_version.dat
      def print_mn_node_version(self,dict,file_node):
              # временный массив для сохранения и печати подготовленных отформатированных строк
@@ -187,8 +160,6 @@ class ReadNode(object):
              # цикл для записи в файл массива version
              for item in version:
                file_node.write(item+"\n")
-
-
      # читаем таблицу board.dat          
      def read_board(self):
              node_path = self.namedir+'\\board.dat' #строим путь до файла           
@@ -209,7 +180,7 @@ class ReadNode(object):
                                boardCSlocal["BOARDNR"]='{0:12s}'.format(temp_string[1])
                                boardCSlocal["PARENT_BOARDNR"]='{0:12s}'.format(temp_string[2])
                                boardCSlocal["BOARD_POS"]='{0:12s}'.format(temp_string[3])
-                               boardCSlocal["BOARD_TYPE"]='{0:12s}'.format(temp_string[4])
+                               boardCSlocal["BOARD_TYPE"]='{0:12s}'.format(temp_string[4]+self.boardtipeidtotype(temp_string[4],self.typenode,temp_string[8]))
                                boardCSlocal["BOARD_EQUIP"]='{0:12s}'.format(temp_string[5])
                                boardCSlocal["BOARD_OOSI"]='{0:12s}'.format(temp_string[6])
                                boardCSlocal["REQ_BOARD_ID"]='{0:12s}'.format(temp_string[7])
@@ -231,7 +202,6 @@ class ReadNode(object):
                 except Exception:
                     print("\nПроблема с чтением файла: "+node_path+"\n")
              else: print("\nОтсутствует файл: %s\n" %node_path)
-
      # печать с форматированием данных board.dat
      def print_board(self,file_node): 
          # временный массив для сохранения и печати подготовленных отформатированных строк
@@ -257,8 +227,7 @@ class ReadNode(object):
              boardCS = self.boardCS
              typenode=self.typenode          
              #boardtext = self.boardtipeidtotype(boardCS[0]["BOARD_TYPE"],typenode,boardCS[0]["ACT_BOARD_ID"])
-             # форматирование строк с данными и добавление в массив board
-             
+             # форматирование строк с данными и добавление в массив board   
              for i in boardCS:
                  board[1]+=i["BOARDNR"]+'|'
                  board[2]+=i["PARENT_BOARDNR"]+'|'
@@ -273,14 +242,11 @@ class ReadNode(object):
                  board[11]+=i["BOARD_PROFILE_TYPE"]+'|'
                  board[12]+=i["BOARD_PROFILE_ID"]+'|'
                  board[13]+=i["S_NODE"]+'|'
-                 board[14]+=i["GEOSYS_UNIT_ID"]+'|'
-
-                
+                 board[14]+=i["GEOSYS_UNIT_ID"]+'|'         
              # цикл для записи в файл отчёта массива board
              for item in board:
                  file_node.write(item+"\n")       
-         else: return False
-           
+         else: return False    
      # печать обработанных данных xml 
      def print_release_xml(self,releases,description_releases,version,file_node):
                  xml = []
@@ -294,7 +260,6 @@ class ReadNode(object):
                          xml.append("-"*50)
                      for item in xml:
                          file_node.write(item+"\n")
-        
      # функция общей печати данных    
      def print_nodes(self):
              tmpfile= "info_from_NODE_"+self.dicnode["NODEID"]+".txt"
@@ -311,8 +276,7 @@ class ReadNode(object):
                  print("\nОтчет сгенерирован в файле: "+tmpfile+"\n")
              except Exception:
                     print("\nЕсть проблемы с созданием и записью файла отчета!!!\n")
-             finally: file_node.close() 
-              
+             finally: file_node.close()             
      def read_release_xml(self):
             dbrelease = self.dicmnnodeversion["DB_RELEASE"]
             datarelease = self.dicmnnodeversion["DATA_RELEASE"]
@@ -320,8 +284,7 @@ class ReadNode(object):
             # определяем путь к текущему расположению скрипта 
             BASE_DIR = os.path.dirname(os.path.abspath(__file__))
             # определяем файл xls для парсинга
-            name = os.path.join(BASE_DIR,'Версии ПО MN V5_6.xls')
-          
+            name = os.path.join(BASE_DIR,'Версии ПО MN V5_6.xls')  
             #переменные
             index_cs6112 = 0
             index_cs6113 = 0
@@ -334,7 +297,6 @@ class ReadNode(object):
             index_mg6113cx = 0
             index_mg6114 = 0
             index_mg6131 = 0
-
             count = 0
             #description = ['Version release: ','MN Release: ','SN Release: ','DB Release: ','DATA Release: ','Preinstallation: ','Info: '] # массив с описанием выводимых полей
             # проверяем на существование и начинаем обрабатывать
@@ -418,12 +380,7 @@ class ReadNode(object):
             else: 
                  print("Отсутствует файл 'Версии ПО MN V5_6.xls' в директории "+BASE_DIR)
                  return False                
-         #else: 
-         #    print("В экспорте отсутствует файл mn_node_version.dat, либо он пустой")
-         #    return False
-                            
 # END CLASS my_node         
-
 # Функция разбора аргументов командной строки и предоставления справки в стиле unix  
 # Используется функция argparse   
 def createParser():
@@ -443,7 +400,6 @@ def createParser():
     parser.add_argument('--version','-v', action = 'version',help = 'Вывести номер версии',version = '%(prog)s {}'.format(versioncode)) # показывают версию
     return parser
 # END Parser
-
 ####################################################################################
 #                               Главный алгоритм скрипта                           #                                
 ####################################################################################
@@ -470,8 +426,7 @@ if __name__ == '__main__':
         my_node.read_node() # Читаем таблицу node.dat
         my_node.read_ne_hostname() # Читаем таблицу ne_hostname.dat
         my_node.read_board() # Читаем таблицу board.dat
-        my_node.print_nodes() # Печатаем обработанные данные
-           
+        my_node.print_nodes() # Печатаем обработанные данные    
     else:
         print("Директория "+namespace.directory+"  - не существует\n")
   else: # Если в командной строке нет аргументов, то выводим help
